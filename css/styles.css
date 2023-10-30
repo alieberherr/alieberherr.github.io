@@ -11804,7 +11804,7 @@ a:visited {
 }
 
 a:hover {
-  color: black;
+  color: var(--bs-nav-link-hover-color);
   background-color: transparent;
   text-decoration: none;
 }
