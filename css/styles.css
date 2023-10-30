@@ -3759,6 +3759,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  overflow: hidden;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -3786,7 +3787,7 @@ textarea.form-control-lg {
 }
 
 .navbar-nav {
-  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-navbar-color);
@@ -11817,4 +11818,58 @@ body {
   font-family: 'Athiti';font-size: 22px;
   display: block;
   /* text-align: center; */
+}
+
+/* The subnavigation menu */
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  color: #4678B2;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-weight: bolder;
+  /* padding: .5rem .7rem; */
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+}
+
+.subnavbtn:hover {
+  color: var(--bs-nav-link-hover-color);
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  z-index: 1;
+  color:#4678B2;
+  font-weight: bolder;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: #4678B2;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: transparent;
+  color: var(--bs-nav-link-hover-color);
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
 }
